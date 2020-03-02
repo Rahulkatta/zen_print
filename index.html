@@ -221,20 +221,17 @@
       }
     }
 
-    @media all and (min-width: 800px) {
+    @media all and (min-width: 800px) {}
 
-    }
-
-    button{
+    button {
       margin-top: 100% !important;
       margin-bottom: 100% !important;
-      background-color:#FD6C00 ! important;
-      color:#ffffff !important;
+      background-color: #FD6C00 ! important;
+      color: #ffffff !important;
       border-radius: 20px !important;
       font-weight: bold !important;
       font-size: 16px !important;
     }
-
   </style>
 
 </head>
@@ -263,10 +260,32 @@
               <div class="col-sm-12" style="margin-top:50px;margin-bottom:50px;">
                 <div class="col-sm-3"></div>
                 <div class="col-sm-6">
-                  <button type="button" class="form-control" id="myButton" onclick="location.href = 'https://www.zenoti.com/zenprint?invoiceId=90d02ae6-69c6-4414-a161-5b3c01587298&centerId=cab7edd3-d8e8-4c27-a36b-8aa16b8dbb4f&token=AN%3Aoperations2%7C%24ARD%23w6fOdpQ6w%2FGocyof3rRMwdDvCNlY2czxZPhESDeuorl1qDU3Eveijh6i%2BvhO%2B6EzNH365nGINimfJ37DuSJNyXPzQgfJPvQEcH5QZzkxzvoMQgstC%2BE1MqP0tB7O6DGjz4d9qUSe8ixvtHoZsL80uaLowGbnHn8DqoR4f4d%2F29zYIBRqmHzEGMWSnhcmcSjpWpC9sXgcgE%2Bcev3S152sadfJtBTyFXfslCuD3G5nfmTwdhyGmTq7QcYH'" value="print" name="button">Print</button>
+                  <button type="button" class="form-control" id="myButton" onclick="gotoUrl()" value="print" name="button">Print</button>
                 </div>
                 <div class="col-sm-3"></div>
               </div>
+
+              <script type="text/javascript">
+
+                function gotoUrl() {
+                  intent: #Intent;
+                  action = android.intent.action.SEND;
+                  type = text / plain;
+                  S.android.intent.extra.TEXT = invoiceId = 9 0 d02ae6-6 9 c6-4414-a161-5 b3c01587298&centerId=cab7edd3-d8e8-4 c27-a36b-8 aa16b8dbb4f&token=AN%3 Aoperations2%7 C%2 4 ARD%2 3 LATj00yZR3BNEIfaJnhbH1snSYyn5sapMI3Ss1N3wVQi43o%2 BxSSEt%2 BhYpwlOI0BMWudVmifHEGw3IA3K9XvHa0wXVZuGC9EbDS9hRllQGyjADtW2cND03C4Lobi11jHaUY7Gtwr3SW2nEN%2 F9s4oulwEIiJckxrLCCrrUeF9n%2 BZDkCAu6XUh0Qh4ZX3GR57%2 BAZM%2 BpmnkxiyoXmo8NM%2 B329GYRWpoPw4OQouT%2 FhcC%2 FSauuq8wmLnCIxMR1&url=https%3A%2F%2Fapioperations2.zenotibeta.com;
+                  S.android.intent.extra.SUBJECT = Amazing;
+                  S.browser_fallback_url = https % 3 A % 2 F % 2 Fplay.google.com % 2 Fstore % 2 Fapps % 2 Fdetails%3 Fid%3 Dcom.zenoti.mpos % 2 6 hl % 3 Den;
+                  end
+                }
+
+
+                // https://www.zenoti.com/zenprint?
+                // invoiceId=90d02ae6-69c6-4414-a161-5b3c01587298
+                // centerId=cab7edd3-d8e8-4c27-a36b-8aa16b8dbb4f
+                // token=AN%3Aoperations2%7C%24ARD%23LATj00yZR3BNEIfaJnhbH1snSYyn5sapMI3Ss1N3wVQi43o%2BxSSEt%2BhYpwlOI0BMWudVmifHEGw3IA3K9XvHa0wXVZuGC9EbDS9hRllQGyjADtW2cND03C4Lobi11jHaUY7Gtwr3SW2nEN%2F9s4oulwEIiJckxrLCCrrUeF9n%2BZDkCAu6XUh0Qh4ZX3GR57%2BAZM%2BpmnkxiyoXmo8NM%2B329GYRWpoPw4OQouT%2FhcC%2FSauuq8wmLnCIxMR1
+                // url=https%3A%2F%2Fapioperations2.zenotibeta.com
+
+              </script>
+
 
 
             </div>
