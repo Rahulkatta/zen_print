@@ -252,7 +252,7 @@
 
               <div class="page-header">
                 <center>
-                  <h3 style="font-size:36px;font-weight:bold;color:#3b5c69;"> Zenoti </h3>
+                  <h3 style="font-size:36px;font-weight:bold;color:#3b5c69;"> Zenoti_Print </h3>
                 </center>
               </div>
 
@@ -260,7 +260,7 @@
               <div class="col-sm-12" style="margin-top:50px;margin-bottom:50px;">
                 <div class="col-sm-3"></div>
                 <div class="col-sm-6">
-                  <button type="button" class="form-control" id="myButton" onclick="javascript:riggerAppOpen" value="print" name="button">Print</button>
+                  <button type="button" class="form-control" id="myButton" onclick="openAppclicked()" value="print" name="button">Print</button>
                 </div>
                 <div class="col-sm-3"></div>
               </div>
@@ -296,10 +296,11 @@
                 var openApp = function() {
                   window.location.replace('com_zenoti_zenprint');
                 };
-                var triggerAppOpen = function() {
+
+                function openAppclicked() {
                   openApp();
                   setTimeout(fallbackToStore, 250);
-                };
+                }
 
 
               </script>
