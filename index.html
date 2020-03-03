@@ -252,7 +252,7 @@
 
               <div class="page-header">
                 <center>
-                  <h3 style="font-size:36px;font-weight:bold;color:#3b5c69;"> Zen_Print </h3>
+                  <h3 style="font-size:36px;font-weight:bold;color:#3b5c69;"> Zenoti Print </h3>
                 </center>
               </div>
 
@@ -260,7 +260,7 @@
               <div class="col-sm-12" style="margin-top:50px;margin-bottom:50px;">
                 <div class="col-sm-3"></div>
                 <div class="col-sm-6">
-                  <button type="button" class="form-control" id="myButton" onclick="openAppclicked()" value="print" name="button">Print</button>
+                  <button type="button" class="form-control" id="myButton" onclick="javascript:openOrDownloadURL()" value="print" name="button">Print</button>
                 </div>
                 <div class="col-sm-3"></div>
               </div>
@@ -288,18 +288,45 @@
                 // url=https%3A%2F%2Fapioperations2.zenotibeta.com
 
 
-                var fallbackToStore = function() {
-                  window.location.replace('market://details?id=com.myapp.package');
-                };
-                var openApp = function() {
-                  window.location.replace("intent://zenprint/#Intent;scheme=zenprint;package=com.example.zenotiprinter;end");
-                };
+                // var fallbackToStore = function() {
+                //   window.location.replace('market://details?id=com.myapp.package');
+                // };
+                // var openApp = function() {
+                //   window.location.replace("intent://zenprint/#Intent;scheme=zenprint_scheme;package=com.example.zenotiprinter;end");
+                // };
+                //
+                // function openAppclicked() {
+                //   openApp();
+                //   setTimeout(fallbackToStore, 250);
+                // }
 
-                function openAppclicked() {
-                  openApp();
-                  setTimeout(fallbackToStore, 250);
+
+                function openOrDownloadURL() {
+                 var AppURL = "myUniqueScheme://myapp";
+                 var DownloadURL = "http://myapp.com/download";
+
+                 if (navigator.userAgent.match(/Android/)) {
+
+                  if (navigator.userAgent.match(/Chrome/)) {
+                   window.location = "intent://zenprint/#Intent;scheme=zenprint_scheme;package=com.example.zenotiprinter;end"
+
+                  } else {
+                   var iframe = document.createElement("iframe");
+                   iframe.style.border = "none";
+                   iframe.style.width = "1px";
+                   iframe.style.height = "1px";
+                   iframe.onload = function() {
+                    window.location = DownloadURL;
+                   };
+                   iframe.src = AppURL;
+                   document.body.appendChild(iframe);
+                  }
+
+                 } else {
+                  // Not Android mobile
+                  window.location = DownloadURL;
+                 }
                 }
-
 
               </script>
 
