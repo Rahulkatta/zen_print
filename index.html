@@ -272,21 +272,8 @@
 
                   if (navigator.userAgent.match(/Android/)) {
 
-                    if (navigator.userAgent.match(/Chrome/)) {
-                      window.location =
-                        "intent://zenprint/#Intent;scheme=zenprint_scheme;package=com.zenoti.zenotiprinter;S.token=AN%3Aoperations2%7C%24ARD%23Fk4tgpGZ10XoytiUm2DkHdq9sAVYWubMN4WgNNkBFpaEFKkHwgO3NArCAnSUJsN7Ww2T9%2Fqswogu%2BP1NyEfZzmjzbcBLdVBMNW7xxZndc%2FTsDa%2BFKWFjr3E4k07cVx0rmOpQWMLMLAnHMv97XhNiulpZNFeV85OkqhDMIwToYtxd4rUQMi67zj27EWCqa3hlzc5iQamBTZKthAs10Zs8ojmRRVCKW2rtUDdjwncSncUfd0cgNFQs475N;S.centerId=cab7edd3-d8e8-4c27-a36b-8aa16b8dbb4f;S.invoiceId=90d02ae6-69c6-4414-a161-5b3c01587298;S.url=https%3A%2F%2Fapioperations2.zenotibeta.com;end"
-
-                    } else {
-                      var iframe = document.createElement("iframe");
-                      iframe.style.border = "none";
-                      iframe.style.width = "1px";
-                      iframe.style.height = "1px";
-                      iframe.onload = function() {
-                        window.location = DownloadURL;
-                      };
-                      iframe.src = AppURL;
-                      document.body.appendChild(iframe);
-                    }
+                    window.location =
+                      "intent://zenprint/#Intent;scheme=zenprint_scheme;package=com.zenoti.zenotiprinter;S.token=AN%3Aoperations2%7C%24ARD%23Fk4tgpGZ10XoytiUm2DkHdq9sAVYWubMN4WgNNkBFpaEFKkHwgO3NArCAnSUJsN7Ww2T9%2Fqswogu%2BP1NyEfZzmjzbcBLdVBMNW7xxZndc%2FTsDa%2BFKWFjr3E4k07cVx0rmOpQWMLMLAnHMv97XhNiulpZNFeV85OkqhDMIwToYtxd4rUQMi67zj27EWCqa3hlzc5iQamBTZKthAs10Zs8ojmRRVCKW2rtUDdjwncSncUfd0cgNFQs475N;S.centerId=cab7edd3-d8e8-4c27-a36b-8aa16b8dbb4f;S.invoiceId=90d02ae6-69c6-4414-a161-5b3c01587298;S.url=https%3A%2F%2Fapioperations2.zenotibeta.com;end"
 
                   } else {
                     // Not Android mobile
